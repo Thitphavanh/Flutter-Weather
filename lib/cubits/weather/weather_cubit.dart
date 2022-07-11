@@ -13,6 +13,7 @@ class WeatherCubit extends Cubit<WeatherState> {
   WeatherCubit({
     required this.weatherRepository,
   }) : super(WeatherState.initial());
+
   Future<void> fetchWeather(String city) async {
     emit(state.copyWith(status: WeatherStatus.loading));
 
@@ -23,11 +24,13 @@ class WeatherCubit extends Cubit<WeatherState> {
         status: WeatherStatus.loaded,
         weather: weather,
       ));
+      print('state: $state');
     } on CustomError catch (e) {
       emit(state.copyWith(
         status: WeatherStatus.error,
         error: e,
       ));
+      print('state: $state');
     }
   }
 }

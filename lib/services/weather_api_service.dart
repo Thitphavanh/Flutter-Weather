@@ -6,6 +6,7 @@ import 'package:flutter_weather_cubit/exceptions/weather_exception.dart';
 import 'package:flutter_weather_cubit/models/weather.dart';
 import 'package:flutter_weather_cubit/services/http_error_handler.dart';
 import 'package:http/http.dart' as http;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class WeatherApiServices {
   final http.Client httpClient;
@@ -20,6 +21,7 @@ class WeatherApiServices {
       path: '/api/location/search/',
       queryParameters: {
         'query': city,
+        'appid': dotenv.env['APPID'],
       },
     );
 

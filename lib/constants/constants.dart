@@ -1,1 +1,1 @@
-const String kHost = 'www.openweathermap.org';
+const String kHost = 'api.openweathermap.org';

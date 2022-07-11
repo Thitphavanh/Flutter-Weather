@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_weather_cubit/cubits/weather/weather_cubit.dart';
-import 'package:flutter_weather_cubit/models/weather.dart';
 import 'package:flutter_weather_cubit/pages/home_page.dart';
 import 'package:flutter_weather_cubit/repositories/weather_repository.dart';
 import 'package:flutter_weather_cubit/services/weather_api_service.dart';

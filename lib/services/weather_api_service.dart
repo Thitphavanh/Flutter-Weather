@@ -54,6 +54,9 @@ class WeatherApiServices {
       scheme: 'https',
       host: kHost,
       path: '/api/location/$woeid',
+      queryParameters: {
+        'appid': dotenv.env['APPID'],
+      },
     );
 
     try {

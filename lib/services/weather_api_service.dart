@@ -55,6 +55,7 @@ class WeatherApiServices {
       host: kHost,
       path: '/api/location/$woeid',
       queryParameters: {
+        'units': kUnit,
         'appid': dotenv.env['APPID'],
       },
     );
